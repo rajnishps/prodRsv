@@ -1,0 +1,131 @@
+:root {
+  --desktop: 1440px;
+  --primaryCyan: hsl(158, 36%, 37%);
+  --primaryCream: hsl(30, 38%, 92%);
+  --textDark: hsl(212, 21%, 14%);
+  --textGray: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --paraFont: 14px;
+}
+@font-face {
+  font-family: mon;
+  src: url(./font/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: fra;
+  src: url(./font/Fraunces-Regular.ttf);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primaryCream);
+}
+
+.wholePage {
+  display: flex;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.images {
+  height: 410px;
+  border-radius: inherit;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.image2 {
+  display: none;
+}
+
+.allText {
+  padding: 10px;
+  padding-right: 5;
+  width: 250px;
+  margin: 20px;
+  margin-top: 0;
+}
+
+.aboveHead {
+  text-transform: uppercase;
+  font-family: mon;
+  font-size: 8px;
+  line-height: 30px;
+  letter-spacing: 5px;
+  color: var(--textGray);
+}
+
+.paraHead {
+  font-family: fra;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.paraText {
+  font-family: mon;
+  font-size: var(--paraFont);
+  margin-bottom: 30px;
+}
+.prices {
+  list-style: none;
+  display: flex;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.newPrice {
+  font-size: 30px;
+  color: var(--primaryCyan);
+  font-weight: 900;
+  font-family: fra;
+}
+
+.oldPrice {
+  font-family: fra;
+  margin: auto;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.addCart {
+  color: var(--white);
+  background-color: var(--primaryCyan);
+  font-family: mon;
+  height: 50px;
+  width: 200px;
+  border: 0;
+  border-radius: 9999px;
+}
+
+.iconCart {
+  margin-right: 10px;
+}
+@media (max-width: 700px) {
+  .wholePage {
+    display: inline;
+  }
+  .image1 {
+    display: none;
+  }
+  .image2 {
+    display: inline;
+  }
+  .images {
+    width: 375px;
+    height: auto;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .allText {
+    width: auto;
+  }
+}
